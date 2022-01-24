@@ -16,9 +16,11 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"johnpapa.angular-essentials",
-    "ms-vscode.azure-account",
+    	"ms-vscode.azure-account",
 		"ms-azuretools.vscode-azurestaticwebapps",
 		"ms-dotnettools.vscode-dotnet-runtime",
+		"github.vscode-pull-request-github",
+		"cschleiden.vscode-github-actions"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
