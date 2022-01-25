@@ -1,21 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { categories } from '../data.categories';
-import {
-  GridDataResult,
-  PageChangeEvent,
-  SelectionEvent,
-} from '@progress/kendo-angular-grid';
+import { GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
 import { SortDescriptor } from '@progress/kendo-data-query';
 import { ProductService } from '../product.service';
 import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
+  selector: 'app-roel-component',
   templateUrl: './bbk-search-results.component.html',
   styleUrls: ['./bbk-search-results.component.sass'],
   providers: [ProductService],
 })
-export class BbkSearchResultsComponent implements OnInit {
+export class BbkSearchResultsComponent {
   public title = 'kendo-angular-app';
   public dropDownItems = categories;
   public defaultItem = { text: 'Filter by Category', value: null };
@@ -28,11 +25,13 @@ export class BbkSearchResultsComponent implements OnInit {
 
   public loadingUri = false;
 
-  constructor(private service: ProductService, private router: Router, private route: ActivatedRoute) {
+  constructor(
+    private service: ProductService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
     this.loadGridItems();
   }
-
-  public ngOnInit(): void {}
 
   public pageChange(event: PageChangeEvent): void {
     this.skip = event.skip;
@@ -62,7 +61,7 @@ export class BbkSearchResultsComponent implements OnInit {
     this.loadGridItems();
   }
 
-  public selectionChange(event: SelectionEvent): void {
+  public selectionChange(): void {
     this.router.navigate(['1'], { relativeTo: this.route });
   }
 }

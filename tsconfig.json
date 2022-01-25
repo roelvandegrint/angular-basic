@@ -27,7 +27,6 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    // TODO: Disable when Kendo stuff is moved out again.
-    "strictTemplates": false
+    // "strictTemplates": true
   }
 }

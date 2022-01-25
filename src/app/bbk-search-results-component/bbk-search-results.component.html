@@ -5,8 +5,7 @@
     textField="text"
     valueField="value"
     (valueChange)="handleFilterChange($event)"
-  >
-  </kendo-dropdownlist>
+  ></kendo-dropdownlist>
 </p>
 
 <p>
@@ -21,9 +20,9 @@
     (sortChange)="handleSortChange($event)"
     [height]="400"
     [selectable]="true"
-    (selectionChange)="selectionChange($event)"
+    (selectionChange)="selectionChange()"
   >
-    <kendo-grid-column field="ProductID" title="ID" width="50">
+    <kendo-grid-column field="ProductID" title="ID" [width]="50">
     </kendo-grid-column>
     <kendo-grid-column field="ProductName" title="Product Name">
     </kendo-grid-column>
@@ -32,11 +31,12 @@
     <kendo-grid-column
       field="UnitPrice"
       title="Unit Price"
-      width="140"
+      [width]="140"
       format="{0:c}"
+      test="bert"
     >
     </kendo-grid-column>
-    <kendo-grid-column field="Discontinued" width="140" filter="boolean">
+    <kendo-grid-column field="Discontinued" [width]="140" filter="boolean">
       <ng-template kendoGridCellTemplate let-dataItem>
         <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
       </ng-template>

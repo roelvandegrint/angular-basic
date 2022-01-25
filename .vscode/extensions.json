@@ -1,10 +1,10 @@
 {
     "recommendations": [
         "johnpapa.angular-essentials",
-    	"ms-vscode.azure-account",
-		"ms-azuretools.vscode-azurestaticwebapps",
-		"ms-dotnettools.vscode-dotnet-runtime",
-		"github.vscode-pull-request-github",
-		"cschleiden.vscode-github-actions"
+    	  "ms-vscode.azure-account",
+		    "ms-azuretools.vscode-azurestaticwebapps",
+		    "ms-dotnettools.vscode-dotnet-runtime",
+		    "github.vscode-pull-request-github",
+		    "cschleiden.vscode-github-actions"
     ]
 }

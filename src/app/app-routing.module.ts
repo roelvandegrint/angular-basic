@@ -25,7 +25,7 @@ export class NameGuard implements CanActivate {
 const routes: Routes = [
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: 'bbk/:productId',
@@ -35,14 +35,14 @@ const routes: Routes = [
   {
     path: 'bbk',
     component: BbkSearchResultsComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: '',
     pathMatch: 'full',
     component: HomeComponent,
-    canActivate: [AuthGuard]
-  }
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -6,9 +6,4 @@ import { ProductService } from '../product.service';
   styleUrls: ['./bbk-details.component.sass'],
   providers: [ProductService],
 })
-export class BbkDetailsComponent implements OnInit {
-
-  constructor(private service: ProductService) {}
-
-  public ngOnInit(): void {}
-}
+export class BbkDetailsComponent {}
