@@ -14,7 +14,7 @@ export class ProductService {
     skip: number,
     pageSize: number,
     sortDescriptor: SortDescriptor[],
-    filterTerm: number
+    filterTerm?: number
   ): Observable<DataResult> {
     let data;
     if (filterTerm) {
